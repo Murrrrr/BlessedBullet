@@ -1,0 +1,78 @@
+footer {
+    margin-top: 4rem;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.footer-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 88%;
+    height: 50%;
+    border-top: 1px solid #707070;
+}
+
+.footer-nav {
+    margin: 1rem 0;
+}
+
+.footer-seller-info > button {
+    padding: 0.6rem 0;
+    width: 85%;
+    background-color: #fff;
+    font-size: 0.5rem;
+    border: 1px solid #707070;
+}
+
+.footer-seller-info .fas {
+    font-size: 0.5rem;
+    color: #000;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.footer-nav > ul > li > a {
+    font-size: 0.5rem;
+}
+
+.footer-nav > ul {
+    display: flex;
+}
+
+.copyright {
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+    font-size: 0.5rem;
+}
+
+@media all and (min-width: 768px) {
+    .footer-container {
+        display: none;
+    }
+
+    .tablet-footer-container {
+        margin: 0 auto;
+        width: 88%;
+        height: 50%;
+        border-top: 1px solid #747474;
+    }
+
+    .footer-logo img {
+        margin: 1.5rem 0;
+        width: 150px;
+    }
+
+    .tablet-footer-container-info > ul > li {
+        color: #747474;
+        font-family: "나눔바른고딕";
+        font-size: 0.8rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .copyright {
+        padding-top: 0.5rem;
+        padding-bottom: 4rem;
+        font-size: 0.8rem;
+    }
+}
