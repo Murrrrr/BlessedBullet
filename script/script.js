@@ -23,6 +23,12 @@ $(document).ready(function () {
 
 
     if (media_768.matches) {
+        var mySwiper = new Swiper('.main-slide > .swiper-container', {
+            autoplay: true,
+            direction: 'horizontal',
+            loop: true,
+        });
+
         $('.hamburger-menu').click(() => {
             if ($('.header-submenu').hasClass('active') === true) {
                 hamburger_menu_animate_close(12);
@@ -47,6 +53,13 @@ $(document).ready(function () {
 
         })
     } else if (media_1024.matches) {
+
+        var mySwiper = new Swiper('.main-slide > .swiper-container', {
+            autoplay: true,
+            direction: 'horizontal',
+            loop: true,
+        });
+
         $('.hamburger-menu').click(() => {
             if ($('.header-submenu').hasClass('active') === true) {
                 hamburger_menu_animate_close(18);
@@ -72,6 +85,30 @@ $(document).ready(function () {
         })
     }
 
+    else if (media_1280.matches){
+        var mySwiper = new Swiper('.main-slide > .swiper-container', {
+            autoplay: true,
+            direction: 'horizontal',
+            loop: true,
+        });
+
+    }
+
+    else{
+
+        var mySwiper = new Swiper('.main-slide > .swiper-container', {
+            autoplay: true,
+            direction: 'horizontal',
+            loop: true,
+    
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+    }
+
 
     $('.submenu-list > li > a').eq(1).click(() => {
         console.log(1);
@@ -87,16 +124,7 @@ $(document).ready(function () {
         }, 500);
     })
 
-    var mySwiper = new Swiper('.main-slide > .swiper-container', {
-        autoplay: true,
-        direction: 'horizontal',
-        loop: true,
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
-    });
 
     var popular_Swiper = new Swiper('.popular-container-slide > .swiper-container', {
         direction: 'horizontal',
