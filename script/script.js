@@ -1,26 +1,94 @@
 const menu_list = document.querySelectorAll('.header-menu > ul >  li');
 const border = document.querySelectorAll('.border');
+var popular_container = document.querySelector('.popular-container-list');
+var popular_item_list = document.querySelectorAll('.popular-container-list > a');
+var lookbook_container = document.querySelector('.lookbook-container');
+var media_768 = window.matchMedia("all and (max-width: 768px)");
+var media_1024 = window.matchMedia("all and (max-width: 1024px)");
+var media_1280 = window.matchMedia("all and (max-width: 1280px)");
 
-for (let i = 0; i < menu_list.length; i++) {
-    menu_list[i].addEventListener('mouseover', () => {
-        border[i].style.width = "100%";
+
+var lookbook_container_caption = document.querySelector('.lookbook-container .caption');
+var index = 0;
+
+window.onload=()=>{
+    if(window.matchMedia("all and (min-width: 1280px").matches){
+        lookbook_container_caption.style.opacity = "0";
+        lookbook_container_caption.style.transform = "translateX(-100px)";
+        
+        for(let i=0; i<popular_item_list.length; i++){
+            item_hide(i);
+        }
+    }
+
+
+    
+    for (let i = 0; i < menu_list.length; i++) {
+        menu_list[i].addEventListener('mouseover', () => {
+            border[i].style.width = "100%";
+        })
+    }
+    
+    for (let i = 0; i < menu_list.length; i++) {
+        menu_list[i].addEventListener('mouseout', () => {
+            border[i].style.width = "0%";
+        })
+    }
+    
+    function item_show(n){
+            popular_item_list[n].style.transform = "translateY(0)";
+            popular_item_list[n].style.opacity = "1";
+    }
+
+    function item_hide(n){
+        popular_item_list[n].style.transform = "translateY(100px)";     
+        popular_item_list[n].style.opacity = "0"; 
+
+    }
+    
+    function loop(index){
+        setTimeout(()=>{
+            item_show(index-1);
+            if(index < popular_item_list.length)
+                loop(index);
+        },100)
+        index++;
+    }
+
+    if(window.matchMedia("all and (min-width: 1280px").matches){
+    
+    window.addEventListener('scroll',()=>{
+        popular_container_rect = popular_container.getBoundingClientRect();
+        lookbook_container_rect = lookbook_container.getBoundingClientRect();
+
+        if(popular_container_rect.y < 700){
+            loop(index);
+        }
+        else{
+            for(let i=0; i<popular_item_list.length; i++){
+                item_hide(i);
+            }
+        }
+
+        if(lookbook_container_rect.y < 100){
+            lookbook_container_caption.style.opacity = "1";
+            lookbook_container_caption.style.transform = "translateX(0)"
+        }
+
+        else{
+            lookbook_container_caption.style.opacity = "0";
+            lookbook_container_caption.style.transform = "translateX(-100px)";
+        }
     })
 }
-
-for (let i = 0; i < menu_list.length; i++) {
-    menu_list[i].addEventListener('mouseout', () => {
-        border[i].style.width = "0%";
-    })
 }
+
+
+
 
 
 
 $(document).ready(function () {
-    var media_768 = window.matchMedia("all and (max-width: 768px)");
-    var media_1024 = window.matchMedia("all and (max-width: 1024px)");
-    var media_1280 = window.matchMedia("all and (max-width: 1280px)");
-
-
 
     if (media_768.matches) {
         var mySwiper = new Swiper('.main-slide > .swiper-container', {
@@ -53,6 +121,8 @@ $(document).ready(function () {
 
         })
     } else if (media_1024.matches) {
+
+        
 
         var mySwiper = new Swiper('.main-slide > .swiper-container', {
             autoplay: true,
@@ -111,14 +181,14 @@ $(document).ready(function () {
 
 
     $('.submenu-list > li > a').eq(1).click(() => {
-        console.log(1);
+        
         $('.shop-submenu-list').animate({
             "left": "0"
         }, 500);
     })
 
     $('.shop-submenu-list > li > a').last().click(() => {
-        console.log(2);
+
         $('.shop-submenu-list').stop().animate({
             "left": "-50%"
         }, 500);

@@ -42,6 +42,10 @@
     display: none;
 }
 
+.popular-container-list > a{
+    transition: all 0.3s ease-out;
+}
+
 
 .item-info,
 .item-price {
@@ -152,6 +156,7 @@
 }
 
 .lookbook-container .caption{
+    transition: all 1s;
     margin-top: -40px;
 }
 
