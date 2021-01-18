@@ -32,6 +32,7 @@ $main-image-caption-fontsize: 1rem;
     .main-image {
         position: relative;
         background-image: url(../images/Concept1.jpg);
+        background-repeat: no-repeat;
         background-position-y: 25px;
         background-size: 100%;
         height: $header-height * 2;
@@ -43,7 +44,9 @@ $main-image-caption-fontsize: 1rem;
         position: absolute;
         color: #fff;
         font-weight: bold;
-        top: 0;
+        top: 0%;
+        left: 0%;
+        width: auto;
         font-size: $main-image-caption-fontsize;
     }
 
@@ -69,6 +72,7 @@ $main-image-caption-fontsize: 1rem;
                 text-align: right;
 
                 span {
+                    cursor:pointer;
                     padding: 0 5px;
                     border-right: 0.5px solid #4b2222;
                     font-size: 0.5rem;
@@ -119,6 +123,7 @@ $main-image-caption-fontsize: 1rem;
                 }
 
                 .item_price {
+                    margin: 0 auto;
                     text-align: center;
                     font-size: 0.625rem;
                     font-size: 10px;
@@ -188,7 +193,7 @@ $header-height: 4.6875rem;
     //변수 파트 =====================================
 
     $header-height: 6.25rem;
-    $main-image-translateY: -50px;
+    $main-image-translateY: 50px;
     $main-image-caption-fontsize: 1.25rem;
 
     $item_page_top: 5rem;
@@ -207,10 +212,6 @@ $header-height: 4.6875rem;
         }
 
         .main-image_caption {
-            position: absolute;
-            color: #fff;
-            font-weight: bold;
-            top: 0;
             font-size: $main-image-caption-fontsize;
         }
 
@@ -403,8 +404,8 @@ $header-height: 4.6875rem;
     //변수 파트 =====================================
 
     $header-height: 6.25rem;
-    $main-image-height: 15.625rem;
-    $main-image-translateY: -75px;
+    $main-image-height: 13rem;
+    $main-image-translateY: 0px;
     $main-image-caption-fontsize: 2.5rem;
 
     $item_page_top: 5rem;
@@ -419,6 +420,7 @@ $header-height: 4.6875rem;
 
         .main-image {
             height: $main-image-height * 2;
+            background-position-y: $main-image-translateY;
         }
 
         .main-image_caption{

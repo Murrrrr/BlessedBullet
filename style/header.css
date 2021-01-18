@@ -292,7 +292,7 @@ header .header_submenu .submenu_list li a {
   header .header_wrap .header_wrap_leftside .header_menu li .border {
     width: 0%;
     background-color: #000;
-    height: 1px;
+    height: 0.8px;
     transition: 0.5s;
   }
   header .header_wrap .header_wrap_leftside .header_menu li a {
