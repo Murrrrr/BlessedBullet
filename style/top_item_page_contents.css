@@ -346,10 +346,10 @@ body {
     width: 100%;
   }
   .bodywrap .item_page .item_page_list .item_page_list_items .item_name {
-    margin-top: 2rem;
+    margin-top: 1.6rem;
     text-align: center;
     font-family: '나눔스퀘어라운드';
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
   }
   .bodywrap .item_page .item_page_list .item_page_list_items .item_price {
