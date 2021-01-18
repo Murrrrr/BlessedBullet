@@ -4,7 +4,8 @@
   list-style: none;
   color: #000;
   font-family: 'Raleway', sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a {
@@ -32,6 +33,8 @@ footer .footer-container .footer-nav {
 }
 
 footer .footer-container .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -92,3 +95,14 @@ footer .footer-seller-info button .fas {
     color: #747474;
   }
 }
+
+@media all and (min-width: 1280px) {
+  .tablet-footer-container .footer-logo {
+    margin-top: 25px;
+    margin-top: 1.5625rem;
+  }
+  .tablet-footer-container .footer-logo img {
+    width: 15%;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
