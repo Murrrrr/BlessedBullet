@@ -7,6 +7,8 @@
     color: #000;
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
+    -webkit-tap-highlight-color : transparent;
+    outline: none;
 }
 
 a {
@@ -185,32 +187,23 @@ $header-height: 4.6875rem;
 
     //변수 파트 =====================================
 
-    $header-height_px: 100px;
-    $header-height_rem: 6.25rem;
+    $header-height: 6.25rem;
     $main-image-translateY: -50px;
-    $main-image-caption-fontsize_rem: 1.25rem;
-    $main-image-caption-fontsize_px: 20px;
+    $main-image-caption-fontsize: 1.25rem;
 
-    $item_page_top_px: 80px;
-    $item_page_top_rem: 5rem;
-    $item_page_header_title_fontsize_px: 24px;
-    $item_page_header_title_fontsize_rem: 1.5rem;
-    $item_page_header_padding_px: 20px;
-    $item_page_header_padding_rem: 1.25rem;
+    $item_page_top: 5rem;
+    $item_page_header_title_fontsize: 1.5rem;
+    $item_page_header_padding: 1.25rem;
 
-    $item_name_fontsize_px: 10px;
-    $item_name_fontsize_rem: 0.625rem;
-    $item_price_fontsize_px: 12px;
-    $item_price_fontsize_rem: 0.75rem;
+    $item_name_fontsize: 0.625rem;
+    $item_price_fontsize: 0.75rem;
 
     .bodywrap {
-        margin-top: $header-height_px;
-        margin-top: $header-height_rem;
+        margin-top: $header-height;
 
         .main-image {
-            background-position-y: -75px;
-            height: $header-height_px * 2;
-            height: $header-height_rem * 2;
+            background-position-y: $main-image-translateY;
+            height: $header-height * 2;
         }
 
         .main-image_caption {
@@ -218,33 +211,23 @@ $header-height: 4.6875rem;
             color: #fff;
             font-weight: bold;
             top: 0;
-            font-size: $main-image-caption-fontsize_px;
-            font-size: $main-image-caption-fontsize_rem;
+            font-size: $main-image-caption-fontsize;
         }
 
         .item_page {
-            margin-top: $item_page_top_rem;
-            margin-top: $item_page_top_px;
+            margin-top: $item_page_top;
 
             .item_page_header {
-                padding: $item_page_header_padding_px 0;
-                padding: $item_page_header_padding_rem 0;
-
-                border-bottom: 0.5px solid #707070;
+                padding: $item_page_header_padding 0;
 
                 .item_page_header_title {
-                    font-size: $item_page_header_title_fontsize_px;
-                    font-size: $item_page_header_title_fontsize_rem;
-                    font-weight: bold;
+                    font-size: $item_page_header_title_fontsize;
                 }
 
                 .item_page_header_sort {
                     span {
-                        padding: 0 $item_page_header_title_fontsize_rem/2;
-                        padding: 0 $item_page_header_title_fontsize_px/2;
-
-                        font-size: $item_page_header_title_fontsize_rem/2;
-                        font-size: $item_page_header_title_fontsize_px/2;
+                        padding: 0 $item_page_header_title_fontsize/2;
+                        font-size: $item_page_header_title_fontsize/2;
                     }
                 }
             }
@@ -252,8 +235,7 @@ $header-height: 4.6875rem;
             .item_page_list {
                 grid-template-columns: repeat(3, 29%);
                 grid-template-rows: repeat(4, 1fr);
-                margin-top: $item_page_header_padding_px/2*5;
-                margin-top: $item_page_header_padding_rem/2*5;
+                margin-top: $item_page_header_padding*2.5;
 
                 .item_page_list_items {
                     width: 100%;
@@ -265,22 +247,18 @@ $header-height: 4.6875rem;
                     }
 
                     .item_name {
-                        margin-top: $item_name_fontsize_rem * 2;
-                        margin-top: $item_name_fontsize_px * 2;
+                        margin-top: $item_name_fontsize * 2;
                         text-align: center;
                         font-family: '나눔스퀘어라운드';
-                        font-size: $item_name_fontsize_px;
-                        font-size: $item_name_fontsize_rem;
+                        font-size: $item_name_fontsize;
                         letter-spacing: 1px;
 
                     }
 
                     .item_price {
                         text-align: center;
-                        font-size: $item_price_fontsize_px;
-                        font-size: $item_price_fontsize_rem;
-                        margin-top: $item_price_fontsize_px;
-                        margin-top: $item_price_fontsize_rem;
+                        font-size: $item_price_fontsize;
+                        margin-top: $item_price_fontsize;
                     }
                 }
             }
