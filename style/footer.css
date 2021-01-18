@@ -5,6 +5,8 @@
   color: #000;
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 a {
