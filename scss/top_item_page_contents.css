@@ -1,0 +1,424 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  position: relative;
+}
+
+.bodywrap {
+  margin-top: 3.125rem;
+  margin-top: 50px;
+  display: block;
+  width: 100%;
+}
+
+.bodywrap .main-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+  height: 9.375rem;
+}
+
+.bodywrap .main-image img {
+  transform: translateY(-25px);
+  width: 100%;
+  filter: brightness(50%);
+}
+
+.bodywrap .main-image .main-image_caption {
+  width: 100%;
+  margin: 65.4px 0;
+  margin: 4.0875rem 0;
+  text-align: center;
+  position: absolute;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+  letter-spacing: 1px;
+}
+
+.bodywrap .item_page {
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  margin-top: 40px;
+  width: 88%;
+}
+
+.bodywrap .item_page .item_page_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 0.5px solid #707070;
+}
+
+.bodywrap .item_page .item_page_header .item_page_header_title {
+  font-weight: bold;
+}
+
+.bodywrap .item_page .item_page_header .item_page_header_sort {
+  text-align: right;
+}
+
+.bodywrap .item_page .item_page_header .item_page_header_sort span {
+  padding: 0 5px;
+  border-right: 0.5px solid #4b2222;
+  font-size: 0.5rem;
+  font-size: 8px;
+  color: #818181;
+}
+
+.bodywrap .item_page .item_page_header .item_page_header_sort span.active {
+  color: #000;
+  font-weight: bold;
+}
+
+.bodywrap .item_page .item_page_header .item_page_header_sort span:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.bodywrap .item_page .item_page_list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: repeat(6, 1fr);
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 25px;
+  margin-top: 1.5625rem;
+}
+
+.bodywrap .item_page .item_page_list .item_page_list_items {
+  width: 100%;
+  margin-bottom: 62px;
+  margin-bottom: 3.875rem;
+}
+
+.bodywrap .item_page .item_page_list .item_page_list_items img {
+  width: 100%;
+}
+
+.bodywrap .item_page .item_page_list .item_page_list_items .item_name {
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  text-align: center;
+  font-family: '나눔스퀘어라운드';
+  font-size: 0.5rem;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.bodywrap .item_page .item_page_list .item_page_list_items .item_price {
+  text-align: center;
+  font-size: 0.625rem;
+  font-size: 10px;
+  margin-top: 0.5rem;
+  margin-top: 8px;
+}
+
+.bodywrap .item_page .item_page_paging {
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bodywrap .item_page .item_page_paging .left-arrow {
+  width: 18px;
+}
+
+.bodywrap .item_page .item_page_paging .left-arrow img {
+  width: 100%;
+}
+
+.bodywrap .item_page .item_page_paging .right-arrow {
+  width: 18px;
+}
+
+.bodywrap .item_page .item_page_paging .right-arrow img {
+  width: 100%;
+  transform: rotate(180deg);
+}
+
+.bodywrap .item_page .item_page_paging a {
+  text-align: center;
+  font-size: 0.6rem;
+  font-family: "나눔스퀘어라운드";
+  color: #818181;
+}
+
+.bodywrap .item_page .item_page_paging a.active {
+  color: #000;
+  font-weight: bold;
+}
+
+@media all and (min-width: 768px) {
+  .bodywrap {
+    margin-top: 100px;
+    margin-top: 6.25rem;
+  }
+  .bodywrap .main-image {
+    height: 200px;
+    height: 12.5rem;
+  }
+  .bodywrap .main-image img {
+    transform: translateY(-50px);
+  }
+  .bodywrap .main-image .main-image_caption {
+    width: 100%;
+    margin: 65.4px 0;
+    margin: 4.0875rem 0;
+    height: auto;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .bodywrap .item_page {
+    margin-top: 5rem;
+    margin-top: 80px;
+  }
+  .bodywrap .item_page .item_page_header {
+    padding: 20px 0;
+    padding: 1.25rem 0;
+    border-bottom: 0.5px solid #707070;
+  }
+  .bodywrap .item_page .item_page_header .item_page_header_title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .bodywrap .item_page .item_page_header .item_page_header_sort span {
+    padding: 0 0.75rem;
+    padding: 0 12px;
+    font-size: 0.75rem;
+    font-size: 12px;
+  }
+  .bodywrap .item_page .item_page_list {
+    grid-template-columns: repeat(3, 29%);
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 50px;
+    margin-top: 3.125rem;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items {
+    width: 100%;
+    margin-bottom: 62px;
+    margin-bottom: 3.875rem;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items img {
+    width: 100%;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items .item_name {
+    margin-top: 1.25rem;
+    margin-top: 20px;
+    text-align: center;
+    font-family: '나눔스퀘어라운드';
+    font-size: 10px;
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items .item_price {
+    text-align: center;
+    font-size: 12px;
+    font-size: 0.75rem;
+    margin-top: 12px;
+    margin-top: 0.75rem;
+  }
+  .bodywrap .item_page .item_page_paging {
+    margin: 0 auto;
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bodywrap .item_page .item_page_paging .left-arrow {
+    width: 36px;
+  }
+  .bodywrap .item_page .item_page_paging .left-arrow img {
+    width: 100%;
+  }
+  .bodywrap .item_page .item_page_paging .right-arrow {
+    width: 36px;
+  }
+  .bodywrap .item_page .item_page_paging .right-arrow img {
+    width: 100%;
+    transform: rotate(180deg);
+  }
+  .bodywrap .item_page .item_page_paging a {
+    text-align: center;
+    font-size: 1rem;
+    font-family: "나눔스퀘어라운드";
+    color: #818181;
+  }
+  .bodywrap .item_page .item_page_paging a.active {
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .bodywrap {
+    margin-top: 100px;
+    margin-top: 6.25rem;
+  }
+  .bodywrap .main-image {
+    height: 300px;
+    height: 18.75rem;
+  }
+  .bodywrap .main-image img {
+    transform: translateY(-75px);
+  }
+  .bodywrap .main-image .main-image_caption {
+    width: 100%;
+    margin: 65.4px 0;
+    margin: 4.0875rem 0;
+    height: auto;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .bodywrap .item_page {
+    margin-top: 5rem;
+    margin-top: 80px;
+  }
+  .bodywrap .item_page .item_page_header {
+    padding: 20px 0;
+    padding: 1.25rem 0;
+    border-bottom: 0.5px solid #707070;
+  }
+  .bodywrap .item_page .item_page_header .item_page_header_title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .bodywrap .item_page .item_page_header .item_page_header_sort span {
+    padding: 0 0.75rem;
+    padding: 0 12px;
+    font-size: 0.75rem;
+    font-size: 12px;
+  }
+  .bodywrap .item_page .item_page_list {
+    grid-template-columns: repeat(3, 29%);
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 50px;
+    margin-top: 3.125rem;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items {
+    width: 100%;
+    margin-bottom: 62px;
+    margin-bottom: 3.875rem;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items img {
+    width: 100%;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items .item_name {
+    margin-top: 1.75rem;
+    margin-top: 28px;
+    text-align: center;
+    font-family: '나눔스퀘어라운드';
+    font-size: 14px;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items .item_price {
+    text-align: center;
+    font-size: 16px;
+    font-size: 1rem;
+    margin-top: 16px;
+    margin-top: 1rem;
+  }
+  .bodywrap .item_page .item_page_paging {
+    margin-top: 100px;
+    width: 30%;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .bodywrap {
+    margin-top: 100px;
+    margin-top: 6.25rem;
+  }
+  .bodywrap .main-image {
+    height: 500px;
+    height: 31.25rem;
+  }
+  .bodywrap .main-image img {
+    transform: translateY(-75px);
+  }
+  .bodywrap .main-image .main-image_caption {
+    width: 100%;
+    margin: 65.4px 0;
+    margin: 4.0875rem 0;
+    height: auto;
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+  .bodywrap .item_page {
+    margin-top: 5rem;
+    margin-top: 80px;
+  }
+  .bodywrap .item_page .item_page_header {
+    padding: 30px 0;
+    padding: 1.875rem 0;
+    border-bottom: 0.5px solid #707070;
+  }
+  .bodywrap .item_page .item_page_header .item_page_header_title {
+    font-size: 30px;
+    font-size: 1.875rem;
+    font-weight: bold;
+  }
+  .bodywrap .item_page .item_page_header .item_page_header_sort span {
+    padding: 0 0.9375rem;
+    padding: 0 15px;
+    font-size: 0.9375rem;
+    font-size: 15px;
+  }
+  .bodywrap .item_page .item_page_list {
+    grid-template-columns: repeat(3, 29%);
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 75px;
+    margin-top: 4.6875rem;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items {
+    width: 100%;
+    margin-bottom: 62px;
+    margin-bottom: 3.875rem;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items img {
+    width: 100%;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items .item_name {
+    margin-top: 2rem;
+    margin-top: 32px;
+    text-align: center;
+    font-family: '나눔스퀘어라운드';
+    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  .bodywrap .item_page .item_page_list .item_page_list_items .item_price {
+    text-align: center;
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .bodywrap .item_page .item_page_paging {
+    width: 25%;
+  }
+}

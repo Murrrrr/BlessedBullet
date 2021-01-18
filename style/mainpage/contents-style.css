@@ -42,6 +42,10 @@
     display: none;
 }
 
+.popular-container-list > a{
+    transition: all 0.3s ease-out;
+}
+
 
 .item-info,
 .item-price {
@@ -151,9 +155,28 @@
     display: none;
 }
 
-.lookbook-container .fa-chevron-circle-right {
-    display: none;
+.lookbook-container .caption{
+    transition: all 1s;
+    margin-top: -40px;
 }
+
+.lookbook-container .caption-text{
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 0;
+    position:absolute;
+    right: 5%;
+    width: 140px;
+    height: 80px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.lookbook-container .caption-text span{
+    font-size: 1.5rem;
+
+}
+
 
 @media all and (min-width: 768px) {
     .popular-container {
@@ -214,6 +237,25 @@
         display: block;
     }
 
+    .lookbook-container .caption{
+        margin-top: -60px;
+    }
+
+    .lookbook-container .caption-text{
+        font-size: 1.1rem;
+        width: 210px;
+        height: 120px;
+
+    }
+
+    .lookbook-container .caption-text span{
+        font-size: 2.1rem;
+    
+    }
+
+    .fa-chevron-circle-right{
+        font-size: 1.5rem;
+    }
 
 
 }
@@ -265,6 +307,7 @@
     }
 
     .lookbook-container .caption {
+        margin-top: -75px;
         top: 50%;
         right: 5%;
         width: auto;
@@ -276,10 +319,12 @@
     }
 
     .lookbook-container .caption-text {
+        width: 300px;
         color: #000;
         margin: 0;
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        height: 150px;
     }
 
     .lookbook-container .caption-text span {
@@ -292,7 +337,7 @@
     .lookbook-container .fa-chevron-circle-right {
         display: block;
         margin-top: 15px;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
 }

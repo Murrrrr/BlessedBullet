@@ -17,6 +17,8 @@ footer {
     margin: 1rem 0;
 }
 
+
+
 .footer-seller-info > button {
     padding: 0.6rem 0;
     width: 85%;
@@ -44,6 +46,10 @@ footer {
     padding-top: 0.5rem;
     padding-bottom: 4rem;
     font-size: 0.5rem;
+}
+
+.fa-chevron-right{
+    width: auto;
 }
 
 @media all and (min-width: 768px) {
