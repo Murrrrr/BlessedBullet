@@ -381,6 +381,13 @@ header {
                     justify-content: space-between;
                     li{
                         width: auto;
+
+                        .border{
+                            width: 0%;
+                            background-color:#000;
+                            height: 1px;
+                            transition: 0.5s;
+                        }
                         a{
                             padding: 10px 0;
                             font-size: 0.875rem;

@@ -8,6 +8,8 @@ const submenu_list_items = document.querySelectorAll('.submenu_list > li');
 const header_submenu = document.querySelector('.header_submenu');
 const shop_submenu_list = document.querySelector('.shop_submenu_list');
 const shop_submenu_list_items = document.querySelectorAll('.shop_submenu_list > li');
+const menu_list = document.querySelectorAll('.header_menu >  li > a');
+const border = document.querySelectorAll('.border');
 
 window.onload = function(){
 
@@ -50,6 +52,18 @@ window.onload = function(){
         })
     }
 
+    for (let i = 0; i < menu_list.length; i++) {
+        menu_list[i].addEventListener('mouseover', () => {
+            border[i].style.width = "100%"
+
+        })
+    }
+    
+    for (let i = 0; i < menu_list.length; i++) {
+        menu_list[i].addEventListener('mouseout', () => {
+            border[i].style.width = "0%"
+        })
+    }
     
 
 
@@ -74,6 +88,8 @@ window.onload = function(){
             line_bottom.style.top = `${height*2}px`;
         },500);
     }
+
+
 };
 
 
