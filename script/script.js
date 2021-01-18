@@ -201,8 +201,8 @@ $(document).ready(function () {
         loop: true,
 
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.popular-swiper-button-next',
+            prevEl: '.popular-swiper-button-prev',
         }
     });
 
