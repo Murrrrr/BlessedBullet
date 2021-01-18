@@ -483,7 +483,12 @@ $header-height_px: 4.6875rem;
             height: $main-image-height_rem * 2;
         }
 
+        .main-image_caption{
+            font-size: 40px;
+        }
+
         .item_page {
+            width: 70%;
             margin-top: $item_page_top_rem;
             margin-top: $item_page_top_px;
 

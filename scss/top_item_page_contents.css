@@ -375,7 +375,11 @@ body {
     height: 500px;
     height: 31.25rem;
   }
+  .bodywrap .main-image_caption {
+    font-size: 40px;
+  }
   .bodywrap .item_page {
+    width: 70%;
     margin-top: 5rem;
     margin-top: 80px;
   }
