@@ -91,7 +91,7 @@ body {
 }
 
 .bodywrap .item_page .item_page_list {
-  display: grid;
+  display: none;
   width: 100%;
   grid-template-columns: 45% 45%;
   grid-template-rows: repeat(6, 1fr);
@@ -99,6 +99,10 @@ body {
   height: 100%;
   margin-top: 25px;
   margin-top: 1.5625rem;
+}
+
+.bodywrap .item_page .item_page_list.active {
+  display: grid;
 }
 
 .bodywrap .item_page .item_page_list .item_page_list_items {
@@ -140,6 +144,7 @@ body {
 }
 
 .bodywrap .item_page .item_page_paging .left-arrow {
+  cursor: pointer;
   width: 0.6rem;
 }
 
@@ -148,6 +153,7 @@ body {
 }
 
 .bodywrap .item_page .item_page_paging .right-arrow {
+  cursor: pointer;
   width: 0.6rem;
 }
 
@@ -161,6 +167,8 @@ body {
 }
 
 .bodywrap .item_page .item_page_paging .paging_numbers span {
+  padding: 10px;
+  cursor: pointer;
   font-size: 1rem;
   font-family: "나눔스퀘어라운드";
   color: #818181;

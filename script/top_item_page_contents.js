@@ -1,8 +1,10 @@
 const main_image_caption = document.querySelector('.main-image_caption');
 const main_image = document.querySelector('.main-image');
 const sort_list = document.querySelectorAll('.item_page_header_sort > span');
+const paging_numbers = document.querySelectorAll('.paging_numbers > span');
 
 var item_page_list_items = document.querySelectorAll('.item_page_list_items');
+var item_page_list = document.querySelectorAll('.item_page_list');
 var item_price = document.querySelectorAll('.item_price');
 var item_name = document.querySelectorAll('.item_name');
 var item_image = document.querySelectorAll('.item_page_list_items > img')
@@ -11,6 +13,8 @@ var popular_info_array = [];
 
 main_image_caption.style.left = `${main_image.clientWidth / 2 - main_image_caption.clientWidth / 2}px`
 main_image_caption.style.top = `${main_image.clientHeight / 2 - main_image_caption.clientHeight / 2}px`
+
+//=================================================================
 
 for (let i = 0; i < sort_list.length; i++) {
     sort_list[i].addEventListener('click', () => {
@@ -34,6 +38,8 @@ for (let i = 0; i < sort_list.length; i++) {
 
 }
 
+//=================================================================
+
 for (let i = 0; i < item_page_list_items.length; i++) {
     popular_info_array.push(new item_info(item_name[i].innerHTML, item_price[i].innerHTML, item_image[i].src));
     item_info_array.push(new item_info(item_name[i].innerHTML, item_price[i].innerHTML, item_image[i].src));
@@ -43,6 +49,21 @@ function item_info(name, price, image) {
     this.name = name;
     this.price = price;
     this.image = image;
+}
+//=================================================================
+
+for (let i = 0; i < paging_numbers.length; i++) {
+    paging_numbers[i].addEventListener('click', () => {
+        for (let j = 0; j < paging_numbers.length; j++){
+            paging_numbers[j].classList.remove('active');
+            item_page_list[j].classList.remove('active');
+        }
+        paging_numbers[i].classList.add('active');
+        item_page_list[i].classList.add('active');
+    })
+
+
+
 }
 
 // 낮은 가격순을 정렬 ====================================
