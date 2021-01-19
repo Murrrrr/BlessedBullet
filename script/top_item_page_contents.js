@@ -1,6 +1,6 @@
 const main_image_caption = document.querySelector('.main-image_caption');
 const main_image = document.querySelector('.main-image');
-const sort_list = document.querySelectorAll('.item_page_header_sort > span');
+const sort_list = document.querySelectorAll('.item_page_sort > select > option');
 const paging_numbers = document.querySelectorAll('.paging_numbers > span');
 
 var item_page_list_items = document.querySelectorAll('.item_page_list_items');
@@ -10,7 +10,7 @@ var item_name = document.querySelectorAll('.item_name');
 var item_image = document.querySelectorAll('.item_page_list_items > img');
 var leftArrow = document.querySelector('.left-arrow');
 var rightArrow = document.querySelector('.right-arrow');
-var item_info_array= [];
+var item_info_array = [];
 var popular_info_array = [];
 
 main_image_caption.style.left = `${main_image.clientWidth / 2 - main_image_caption.clientWidth / 2}px`
@@ -18,27 +18,29 @@ main_image_caption.style.top = `${main_image.clientHeight / 2 - main_image_capti
 
 //=================================================================
 
-for (let i = 0; i < sort_list.length; i++) {
-    sort_list[i].addEventListener('click', () => {
-        for (let j = 0; j < sort_list.length; j++){
-            sort_list[j].classList.remove('active')};
+for(let i=0; i<sort_list.length; i++){
+    sort_list[i].addEventListener('click', ()=>{
+
+        for(let j=0; j<sort_list.length; j++){
+            sort_list[j].classList.remove('active');
+        }
 
         sort_list[i].classList.add('active');
-
-        if(sort_list[0].classList == "active"){
+        if (sort_list[0].classList == "active") {
             popularSort();
-        }
-
-        else if(sort_list[1].classList == "active"){
+        } else if (sort_list[1].classList == "active") {
             lowPriceSort();
-        }
-
-        else if(sort_list[2].classList == "active"){
+        } else if (sort_list[2].classList == "active") {
             highPriceSort();
         }
     })
 
+
 }
+
+
+
+
 
 //=================================================================
 
@@ -56,7 +58,7 @@ function item_info(name, price, image) {
 
 for (let i = 0; i < paging_numbers.length; i++) {
     paging_numbers[i].addEventListener('click', () => {
-        for (let j = 0; j < paging_numbers.length; j++){
+        for (let j = 0; j < paging_numbers.length; j++) {
             paging_numbers[j].classList.remove('active');
             item_page_list[j].classList.remove('active');
         }
@@ -65,30 +67,30 @@ for (let i = 0; i < paging_numbers.length; i++) {
     })
 }
 
-leftArrow.addEventListener('click', ()=>{
-    if(paging_numbers[0].classList == "active")
+leftArrow.addEventListener('click', () => {
+    if (paging_numbers[0].classList == "active")
         return;
 
-    for(let i=0; i < paging_numbers.length; i++){
-        if(paging_numbers[i].classList == "active"){
+    for (let i = 0; i < paging_numbers.length; i++) {
+        if (paging_numbers[i].classList == "active") {
             paging_numbers[i].classList.remove('active');
             item_page_list[i].classList.remove('active');
-            paging_numbers[i-1].classList.add('active');
-            item_page_list[i-1].classList.add('active');
+            paging_numbers[i - 1].classList.add('active');
+            item_page_list[i - 1].classList.add('active');
         }
     }
 });
 
-rightArrow.addEventListener('click', ()=>{
-    if(paging_numbers[paging_numbers.length-1].classList == "active")
+rightArrow.addEventListener('click', () => {
+    if (paging_numbers[paging_numbers.length - 1].classList == "active")
         return;
 
-    for(let i=0; i < paging_numbers.length; i++){
-        if(paging_numbers[i].classList == "active"){
+    for (let i = 0; i < paging_numbers.length; i++) {
+        if (paging_numbers[i].classList == "active") {
             paging_numbers[i].classList.remove('active');
-            paging_numbers[i+1].classList.add('active');
+            paging_numbers[i + 1].classList.add('active');
             item_page_list[i].classList.remove('active');
-            item_page_list[i+1].classList.add('active');
+            item_page_list[i + 1].classList.add('active');
 
             break;
         }
@@ -113,11 +115,11 @@ function lowPriceSort() {
 
 // 높은 가격순을 정렬 ====================================
 
-function compareHighPrice(price1, price2){
+function compareHighPrice(price1, price2) {
     return price1.price > price2.price ? -1 : price1.price < price2.price ? 1 : 0;
 }
 
-function highPriceSort(){
+function highPriceSort() {
     item_info_array.sort(compareHighPrice);
     for (let i = 0; i < item_info_array.length; i++) {
         item_name[i].innerHTML = item_info_array[i].name;
@@ -128,7 +130,7 @@ function highPriceSort(){
 
 // 인기순으로 정렬 =======================================
 
-function popularSort(){
+function popularSort() {
     for (let i = 0; i < popular_info_array.length; i++) {
         item_name[i].innerHTML = popular_info_array[i].name;
         item_price[i].innerHTML = popular_info_array[i].price;

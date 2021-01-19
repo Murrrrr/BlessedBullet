@@ -67,27 +67,33 @@ body {
   font-weight: bold;
 }
 
-.bodywrap .item_page .item_page_header .item_page_header_sort {
-  text-align: right;
+.bodywrap .item_page .item_page_header .item_page_sort {
+  display: flex;
+  align-items: center;
+  width: auto;
 }
 
-.bodywrap .item_page .item_page_header .item_page_header_sort span {
-  cursor: pointer;
-  padding: 0 5px;
-  border-right: 0.5px solid #4b2222;
-  font-size: 0.5rem;
-  font-size: 8px;
-  color: #818181;
+.bodywrap .item_page .item_page_header .item_page_sort select {
+  letter-spacing: 1px;
+  width: 90px;
+  font-size: 12px;
+  border: none;
+  appearance: none;
 }
 
-.bodywrap .item_page .item_page_header .item_page_header_sort span.active {
-  color: #000;
-  font-weight: bold;
+.bodywrap .item_page .item_page_header .item_page_sort select option {
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100px;
+  font-size: 12px;
+  border: none;
+  appearance: none;
 }
 
-.bodywrap .item_page .item_page_header .item_page_header_sort span:last-child {
-  padding-right: 0;
-  border-right: none;
+.bodywrap .item_page .item_page_header .item_page_sort img {
+  margin-top: 6px;
+  width: 5px;
+  transform: rotate(-90deg);
 }
 
 .bodywrap .item_page .item_page_list {
@@ -162,6 +168,8 @@ body {
 }
 
 .bodywrap .item_page .item_page_paging .paging_numbers {
+  display: flex;
+  align-items: center;
   text-align: center;
 }
 
@@ -205,8 +213,7 @@ body {
   .bodywrap .item_page .item_page_header .item_page_header_title {
     font-size: 1.5rem;
   }
-  .bodywrap .item_page .item_page_header .item_page_header_sort span {
-    padding: 0 0.75rem;
+  .bodywrap .item_page .item_page_header .item_page_sort select {
     font-size: 0.75rem;
   }
   .bodywrap .item_page .item_page_list {
