@@ -143,7 +143,7 @@ $main-image-caption-fontsize: 1rem;
             justify-content: space-between;
 
             .left-arrow {
-                width: 18px;
+                width: 0.6rem;
 
                 img {
                     width: 100%;
@@ -151,7 +151,7 @@ $main-image-caption-fontsize: 1rem;
             }
 
             .right-arrow {
-                width: 18px;
+                width: 0.6rem;
 
                 img {
                     width: 100%;
@@ -159,16 +159,24 @@ $main-image-caption-fontsize: 1rem;
                 }
             }
 
-            a {
+            .paging_numbers{
                 text-align: center;
-                font-size: 0.6rem;
-                font-family: "나눔스퀘어라운드";
-                color: #818181;
+                span {
+                    font-size: 1rem;
+                    font-family: "나눔스퀘어라운드";
+                    color: #818181;
+                    margin: 0 0.5rem;
 
-                &.active {
-                    color: #000;
-                    font-weight: bold;
-                }
+                    &.active {
+                        color: #000;
+                        font-weight: bold;
+                    }
+
+            }
+
+
+
+
             }
 
 
@@ -340,6 +348,7 @@ $header-height: 4.6875rem;
         }
 
         .item_page {
+            
             margin-top: $item_page_top;
 
             .item_page_header {

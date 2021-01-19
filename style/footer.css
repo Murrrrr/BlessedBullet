@@ -4,8 +4,7 @@
   list-style: none;
   color: #000;
   font-family: 'Raleway', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
@@ -35,8 +34,6 @@ footer .footer-container .footer-nav {
 }
 
 footer .footer-container .footer-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -52,7 +49,6 @@ footer .footer-container .copyright {
 
 footer .footer-seller-info button {
   padding: 0.6rem 0;
-  width: 85%;
   background-color: #fff;
   font-size: 0.5rem;
   border: 1px solid #707070;
@@ -76,9 +72,9 @@ footer .footer-seller-info button .fas {
   }
   .tablet-footer-container {
     display: block;
-    width: 70%;
     margin: 0 auto;
     border-top: 1px solid #707070;
+    width: 88%;
   }
   .tablet-footer-container .footer-logo {
     margin-top: 25px;
@@ -99,6 +95,9 @@ footer .footer-seller-info button .fas {
 }
 
 @media all and (min-width: 1280px) {
+  .tablet-footer-container {
+    width: 70%;
+  }
   .tablet-footer-container .footer-logo {
     margin-top: 25px;
     margin-top: 1.5625rem;

@@ -51,7 +51,6 @@ footer {
     .footer-seller-info {
         button {
             padding: 0.6rem 0;
-            width: 85%;
             background-color: #fff;
             font-size: 0.5rem;
             border: 1px solid #707070;
@@ -78,10 +77,9 @@ footer {
 
     .tablet-footer-container {
         display: block;
-        width: 70%;
         margin: 0 auto;
         border-top: 1px solid #707070;
-
+        width: 88%;
         .footer-logo {
             margin-top: 25px;
             margin-top: 1.5625rem;
@@ -108,6 +106,8 @@ footer {
 
 @media all and (min-width: 1280px) {
     .tablet-footer-container {
+        width: 70%;
+
         .footer-logo {
             margin-top: 25px;
             margin-top: 1.5625rem;
