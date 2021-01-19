@@ -55,7 +55,6 @@ window.onload = function(){
     for (let i = 0; i < menu_list.length; i++) {
         menu_list[i].addEventListener('mouseover', () => {
             border[i].style.width = "100%"
-
         })
     }
     
