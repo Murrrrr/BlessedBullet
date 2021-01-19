@@ -9,16 +9,16 @@ var item_image = document.querySelectorAll('.item_page_list_items > img')
 var item_info_array= [];
 var popular_info_array = [];
 
-
-
 main_image_caption.style.left = `${main_image.clientWidth / 2 - main_image_caption.clientWidth / 2}px`
 main_image_caption.style.top = `${main_image.clientHeight / 2 - main_image_caption.clientHeight / 2}px`
 
 for (let i = 0; i < sort_list.length; i++) {
     sort_list[i].addEventListener('click', () => {
-        for (let j = 0; j < sort_list.length; j++)
-            sort_list[j].classList.remove('active');
+        for (let j = 0; j < sort_list.length; j++){
+            sort_list[j].classList.remove('active')};
+
         sort_list[i].classList.add('active');
+
         if(sort_list[0].classList == "active"){
             popularSort();
         }
@@ -30,9 +30,6 @@ for (let i = 0; i < sort_list.length; i++) {
         else if(sort_list[2].classList == "active"){
             highPriceSort();
         }
-
-
-
     })
 
 }
@@ -42,21 +39,16 @@ for (let i = 0; i < item_page_list_items.length; i++) {
     item_info_array.push(new item_info(item_name[i].innerHTML, item_price[i].innerHTML, item_image[i].src));
 }
 
-
-
-
 function item_info(name, price, image) {
     this.name = name;
     this.price = price;
     this.image = image;
 }
 
+// 낮은 가격순을 정렬 ====================================
+
 function compareLowPrice(price1, price2) {
     return price1.price < price2.price ? -1 : price1.price > price2.price ? 1 : 0;
-}
-
-function compareHighPrice(price1, price2){
-    return price1.price > price2.price ? -1 : price1.price < price2.price ? 1 : 0;
 }
 
 function lowPriceSort() {
@@ -68,6 +60,12 @@ function lowPriceSort() {
     }
 }
 
+// 높은 가격순을 정렬 ====================================
+
+function compareHighPrice(price1, price2){
+    return price1.price > price2.price ? -1 : price1.price < price2.price ? 1 : 0;
+}
+
 function highPriceSort(){
     item_info_array.sort(compareHighPrice);
     for (let i = 0; i < item_info_array.length; i++) {
@@ -76,6 +74,8 @@ function highPriceSort(){
         item_image[i].src = item_info_array[i].image;
     }
 }
+
+// 인기순으로 정렬 =======================================
 
 function popularSort(){
     for (let i = 0; i < popular_info_array.length; i++) {

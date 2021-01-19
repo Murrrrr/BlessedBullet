@@ -48,6 +48,7 @@ $main-image-caption-fontsize: 1rem;
         left: 0%;
         width: auto;
         font-size: $main-image-caption-fontsize;
+        letter-spacing: 2px;
     }
 
 
@@ -250,7 +251,7 @@ $header-height: 4.6875rem;
                     .item_name {
                         margin-top: $item_name_fontsize * 2;
                         text-align: center;
-                        font-family: '나눔스퀘어라운드';
+                        font-family: 'Raleway';
                         font-size: $item_name_fontsize;
                         letter-spacing: 1px;
 
@@ -334,6 +335,10 @@ $header-height: 4.6875rem;
             background-attachment: fixed;
         }
 
+        .main-image_caption{
+            font-size: 30px;
+        }
+
         .item_page {
             margin-top: $item_page_top;
 
@@ -363,8 +368,7 @@ $header-height: 4.6875rem;
 
                 .item_page_list_items {
                     width: 100%;
-                    margin-bottom: 62px;
-                    margin-bottom: 3.875rem;
+                    margin-bottom: 6.25rem;
 
                     img {
                         width: 100%;
@@ -373,9 +377,10 @@ $header-height: 4.6875rem;
                     .item_name {
                         margin-top: $item_name_fontsize * 2;
                         text-align: center;
-                        font-family: '나눔스퀘어라운드';
+
                         font-size: $item_name_fontsize;
                         letter-spacing: 1px;
+
 
                     }
 
@@ -453,8 +458,7 @@ $header-height: 4.6875rem;
 
                 .item_page_list_items {
                     width: 100%;
-                    margin-bottom: 62px;
-                    margin-bottom: 3.875rem;
+                    margin-bottom: 6.25rem;
 
                     img {
                         width: 100%;
@@ -462,10 +466,7 @@ $header-height: 4.6875rem;
 
                     .item_name {
                         margin-top: $item_name_fontsize * 2;
-                        text-align: center;
-                        font-family: '나눔스퀘어라운드';
                         font-size: $item_name_fontsize;
-                        letter-spacing: 1px;
                     }
 
                     .item_price {

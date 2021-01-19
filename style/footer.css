@@ -4,7 +4,8 @@
   list-style: none;
   color: #000;
   font-family: 'Raleway', sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
@@ -34,6 +35,8 @@ footer .footer-container .footer-nav {
 }
 
 footer .footer-container .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -73,7 +76,7 @@ footer .footer-seller-info button .fas {
   }
   .tablet-footer-container {
     display: block;
-    width: 88%;
+    width: 70%;
     margin: 0 auto;
     border-top: 1px solid #707070;
   }
