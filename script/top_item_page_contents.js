@@ -7,7 +7,9 @@ var item_page_list_items = document.querySelectorAll('.item_page_list_items');
 var item_page_list = document.querySelectorAll('.item_page_list');
 var item_price = document.querySelectorAll('.item_price');
 var item_name = document.querySelectorAll('.item_name');
-var item_image = document.querySelectorAll('.item_page_list_items > img')
+var item_image = document.querySelectorAll('.item_page_list_items > img');
+var leftArrow = document.querySelector('.left-arrow');
+var rightArrow = document.querySelector('.right-arrow');
 var item_info_array= [];
 var popular_info_array = [];
 
@@ -61,10 +63,38 @@ for (let i = 0; i < paging_numbers.length; i++) {
         paging_numbers[i].classList.add('active');
         item_page_list[i].classList.add('active');
     })
-
-
-
 }
+
+leftArrow.addEventListener('click', ()=>{
+    if(paging_numbers[0].classList == "active")
+        return;
+
+    for(let i=0; i < paging_numbers.length; i++){
+        if(paging_numbers[i].classList == "active"){
+            paging_numbers[i].classList.remove('active');
+            item_page_list[i].classList.remove('active');
+            paging_numbers[i-1].classList.add('active');
+            item_page_list[i-1].classList.add('active');
+        }
+    }
+});
+
+rightArrow.addEventListener('click', ()=>{
+    if(paging_numbers[paging_numbers.length-1].classList == "active")
+        return;
+
+    for(let i=0; i < paging_numbers.length; i++){
+        if(paging_numbers[i].classList == "active"){
+            paging_numbers[i].classList.remove('active');
+            paging_numbers[i+1].classList.add('active');
+            item_page_list[i].classList.remove('active');
+            item_page_list[i+1].classList.add('active');
+
+            break;
+        }
+    }
+});
+
 
 // 낮은 가격순을 정렬 ====================================
 
