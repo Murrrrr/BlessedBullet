@@ -130,7 +130,6 @@ $main-image-caption-fontsize: 1rem;
                     font-family: '나눔스퀘어라운드';
                     font-size: 0.6rem;
                     letter-spacing: 1px;
-
                 }
 
                 .item_price {
@@ -292,7 +291,7 @@ $main-image-caption-fontsize: 1rem;
                 justify-content: space-between;
 
                 .left-arrow {
-                    width: 36px;
+                    width: 18px;
 
                     img {
                         width: 100%;
@@ -300,26 +299,13 @@ $main-image-caption-fontsize: 1rem;
                 }
 
                 .right-arrow {
-                    width: 36px;
+                    width: 18px;
 
                     img {
                         width: 100%;
                         transform: rotate(180deg);
                     }
                 }
-
-                a {
-                    text-align: center;
-                    font-size: 1rem;
-                    font-family: "나눔스퀘어라운드";
-                    color: #818181;
-
-                    &.active {
-                        color: #000;
-                        font-weight: bold;
-                    }
-                }
-
 
             }
 
