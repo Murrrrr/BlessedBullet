@@ -70,30 +70,43 @@ $main-image-caption-fontsize: 1rem;
             }
 
             .item_page_sort {
-                display:flex;
+                
+                position: relative;
+                display: flex;
                 align-items: center;
                 width: auto;
 
-                select {
-                    letter-spacing: 1px;
+                ul {
+                    background-color: white;
+                    top:-20px;
+                    right: 0;
+                    position:absolute;
+                    display:flex;
+                    flex-wrap: wrap;
+                    align-items: center;
                     width: 90px;
-                    font-size: 12px;
-                    border: none;
-                    appearance: none;
-
-                    option {
-                        letter-spacing: 1px;
+                    cursor:pointer;
+                    
+                    li {
                         text-align: center;
-                        width: 100px;
+                        display:none;
+                        padding: 10px;
+                        letter-spacing: 1px;
                         font-size: 12px;
                         border: none;
-                        appearance: none;
+
+                        &.active {
+                            display:block;
+                        }
                     }
                 }
-
                 img {
-                    margin-top: 6px;
-                    width: 5px;
+                    top: -10px;
+                    position:absolute;
+                    right: 0;
+                    margin-right: 3px;
+                    margin-top: 3px;
+                    width: 6px;
                     transform: rotate(-90deg);
                 }
             }
@@ -148,7 +161,7 @@ $main-image-caption-fontsize: 1rem;
             width: 60%;
             height: auto;
             display: flex;
-            align-items:center;
+            align-items: center;
             justify-content: space-between;
 
             .left-arrow {
@@ -172,7 +185,7 @@ $main-image-caption-fontsize: 1rem;
             }
 
             .paging_numbers {
-                display:flex;
+                display: flex;
                 align-items: center;
                 text-align: center;
 

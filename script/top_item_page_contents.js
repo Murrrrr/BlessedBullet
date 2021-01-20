@@ -1,6 +1,7 @@
 const main_image_caption = document.querySelector('.main-image_caption');
 const main_image = document.querySelector('.main-image');
-const sort_list = document.querySelectorAll('.item_page_sort > select > option');
+const sort_list = document.querySelector('.item_page_sort > ul');
+const sort_list_items = document.querySelectorAll('.item_page_sort > ul > li');
 const paging_numbers = document.querySelectorAll('.paging_numbers > span');
 
 var item_page_list_items = document.querySelectorAll('.item_page_list_items');
@@ -18,25 +19,14 @@ main_image_caption.style.top = `${main_image.clientHeight / 2 - main_image_capti
 
 //=================================================================
 
-for(let i=0; i<sort_list.length; i++){
-    sort_list[i].addEventListener('click', ()=>{
-
-        for(let j=0; j<sort_list.length; j++){
-            sort_list[j].classList.remove('active');
-        }
-
-        sort_list[i].classList.add('active');
-        if (sort_list[0].classList == "active") {
-            popularSort();
-        } else if (sort_list[1].classList == "active") {
-            lowPriceSort();
-        } else if (sort_list[2].classList == "active") {
-            highPriceSort();
-        }
-    })
+sort_list.addEventListener('click',()=>{
+    for(let i=0; i<sort_list_items.length; i++){
+        sort_list_items[i].style.display = "block";
+    }
+})
 
 
-}
+
 
 
 
