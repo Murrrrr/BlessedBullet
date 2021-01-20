@@ -59,6 +59,7 @@ $main-image-caption-fontsize: 1rem;
         width: 88%;
 
         .item_page_header {
+            position:relative;
             display: flex;
             justify-content: space-between;
             align-items: baseline;
@@ -69,48 +70,55 @@ $main-image-caption-fontsize: 1rem;
                 font-weight: bold;
             }
 
-            .item_page_sort {
-                
-                position: relative;
-                display: flex;
+            .item_sort_title{
+                cursor:pointer;
+                width: 100px;
+                display:flex;
                 align-items: center;
-                width: auto;
+                justify-content: space-between;
 
-                ul {
-                    background-color: white;
-                    top:-20px;
-                    right: 0;
-                    position:absolute;
-                    display:flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    width: 90px;
-                    cursor:pointer;
-                    
-                    li {
-                        text-align: center;
-                        display:none;
-                        padding: 10px;
-                        letter-spacing: 1px;
-                        font-size: 12px;
-                        border: none;
-
-                        &.active {
-                            display:block;
-                        }
-                    }
-                }
-                img {
-                    top: -10px;
-                    position:absolute;
-                    right: 0;
-                    margin-right: 3px;
-                    margin-top: 3px;
-                    width: 6px;
-                    transform: rotate(-90deg);
+                span{
+                    width: auto;
+                    font-size: 10px;
                 }
             }
+
+            img{
+                margin-top: 2px;
+                margin-right: 5px;
+                width: 5px;
+                transform:rotate(-90deg);
+            }
+
+            .item_sort{
+                opacity: 0;
+                top: 40px;
+                right:0;
+                position:absolute;
+                width: 100px;
+                background: #fff;
+                transition: all 0.4s;
+                overflow:hidden;
+                
+                .option{
+                    display:flex;
+                    flex-wrap: wrap;
+
+                    li{
+                        cursor:pointer;
+                        text-align: center;
+                        padding: 10px;
+                        font-size: 10px;
+
+                        &:hover{
+                            background-color: #ddd;
+                        }
+                    }
+
+
+                }
         }
+    }
 
         .item_page_list {
             display: none;
@@ -124,7 +132,6 @@ $main-image-caption-fontsize: 1rem;
 
             &.active {
                 display: grid;
-
             }
 
             .item_page_list_items {

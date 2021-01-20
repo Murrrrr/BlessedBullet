@@ -1,7 +1,10 @@
 const main_image_caption = document.querySelector('.main-image_caption');
 const main_image = document.querySelector('.main-image');
 const sort_list = document.querySelector('.item_page_sort > ul');
-const sort_list_items = document.querySelectorAll('.item_page_sort > ul > li');
+
+
+
+
 const paging_numbers = document.querySelectorAll('.paging_numbers > span');
 
 var item_page_list_items = document.querySelectorAll('.item_page_list_items');
@@ -19,16 +22,42 @@ main_image_caption.style.top = `${main_image.clientHeight / 2 - main_image_capti
 
 //=================================================================
 
-sort_list.addEventListener('click',()=>{
-    for(let i=0; i<sort_list_items.length; i++){
-        sort_list_items[i].style.display = "block";
+const sort_title = document.querySelector('.item_sort_title');
+const sort_title_text = document.querySelector('.item_sort_title > span');
+const item_sort = document.querySelector('.item_sort');
+const item_sort_list = document.querySelectorAll('.item_sort > ul > li');
+
+sort_title.addEventListener('click',()=>{
+    if(item_sort.style.opacity == "1"){
+        item_sort.style.opacity = "0";
     }
-})
 
+    else{
+        item_sort.style.opacity = "1";
+    }
+});
 
+for(let i=0; i<item_sort_list.length; i++){
+    item_sort_list[i].addEventListener('click',()=>{
+        if(i == 0){
+            item_sort.style.opacity= "0";
+            sort_title_text.innerHTML = "New Item";
+            popularSort();
+        }
 
+        else if(i == 1){
+            item_sort.style.opacity= "0";
+            sort_title_text.innerHTML = "Low Price";
+            lowPriceSort();
+        }
 
-
+        if(i == 2){
+            item_sort.style.opacity= "0";
+            sort_title_text.innerHTML = "High Price";
+            highPriceSort();
+        }
+    })
+}
 
 
 
