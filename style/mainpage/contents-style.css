@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .popular-container {
     margin: auto;
     margin-top: 3.125rem;
@@ -113,41 +117,74 @@
 }
 
 
-.item-wrapper img {
+.item-wrapper .image-box {
+    position:relative;
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    height: 100%;
+}
+
+.image-box:before{
+    position:absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border: 3px solid transparent;
+}
+
+.image-box:hover:before{
+    width: 99%;
+    height: 99%;    
+    border: 3px solid #333;
+    border-right: none;
+    border-bottom: none;
+    transition: height 0.2s linear,
+                width 0.2s linear 0.2s;
+}
+
+.image-box:after{
+    position:absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    right: 0;
+    border: 3px solid transparent;
+}
+
+.image-box:hover:after{
+    width: 99%;
+    height: 99%;    
+    border: 3px solid #333;
+    border-left: none;
+    border-top: none;
+    transition: height 0.2s linear,
+                width 0.2s linear 0.2s;
 }
 
 .item-wrapper a {
-    position: relative;
-
 }
 
 .item-wrapper img {
-    transition: .3s;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s;
 }
 
-.item-wrapper a:hover > img {
-    opacity: 0.2;
+.item-wrapper .image-box:hover > img {
+    opacity: 0.2;   
 }
 
-.item-wrapper a:hover > span {
+.item-wrapper a:hover span {
     opacity: 1;
 }
 
-.item-wrapper > a > span {
-    letter-spacing: 1px;
-    transition: 0.3s;
+.item-wrapper > a span {
     opacity: 0;
-    font-size: 0.8rem;
-    margin-left: -100px;
-    text-align: center;
-    width: 200px;
-    position: absolute;
-    color: #000;
-    top: 50%;
+    top:50%;
     left: 50%;
+    position:absolute;
+    width: 100px;
+    text-align: center;
+    margin: -10px 0 0 -50px;
 }
 
 

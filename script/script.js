@@ -192,7 +192,7 @@ $(document).ready(function () {
         $('.shop-submenu-list').stop().animate({
             "left": "-50%"
         }, 500);
-    })
+    });
 
 
 
