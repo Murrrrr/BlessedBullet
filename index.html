@@ -17,8 +17,6 @@
 <body>
     <header>
         <div class="top">
-
-
             <div class="header-menu">
 
                 <a href="#" class="hamburger-menu">
@@ -29,27 +27,47 @@
 
                 <ul>
                     <li>
-                        <a href="">ABOUT US</a>
-                        <div class="border"></div>
+                        <a href="#">
+                            ABOUT US
+                            <div class="border-box"></div>
+                        </a>
                     </li>
 
-                    <li><a href="">SHOP</a>
-                        <div class="border"></div>
+                    <li> <a href="#">
+                        SHOP
+                            <div class="border-box"></div>
+                        </a>
                     </li>
 
-                    <li><a href="">LOOKBOOK</a>
-                        <div class="border"></div>
+                    <li> <a href="#">
+                        LOOKBOOK
+                            <div class="border-box"></div>
+                        </a>
                     </li>
 
-                    <li><a href="">COMMUNITY</a>
-                        <div class="border"></div>
+                    <li> <a href="#">
+                        COMMUNITY
+                            <div class="border-box"></div>
+                        </a>
+
                     </li>
                 </ul>
+
+
             </div>
 
-            <di class="logo">
+            <ul class="shop-submenu-list_pc">
+                <li><a href="#"><img src="images/Top.jpg" alt="top"><span>TOP</span></a></li>
+                <li><a href="#"><img src="images/Bottom.jpg" alt="bottom"><span>BOTTOM</span></a></li>
+                <li><a href="#"><img src="images/Outer.jpg" alt="outer"><span>OUTER</span></a></li>
+                <li><a href="#"><img src="images/Acc.jpg" alt="acc"><span>ACCESSORIES</span></a></li>
+                <li><a href="#"><img src="images/Chandlery.jpg" alt="chandlery"><span>CHANDLERY</span></a></li>
+                <li><a href="#"><img src="images/shoes.jpg" alt="shoes"><span>SHOES</span></a></li>
+            </ul>
+
+            <div class="logo">
                 <a href="#"><img src="images/fd84aa3f85c47b4ec5b3eabe6bf6e770_13_top.jpg" alt="logo"></a>
-            </di>
+            </div>
 
             <div class="login-menu">
                 <div class="mobile-login-menu">
@@ -59,10 +77,10 @@
                 </div>
 
                 <ul>
-                    <li><a href="">LOGIN</a></li>
-                    <li><a href="">JOIN</a></li>
-                    <li><a href=""><i class="fas fa-search"></i></a></li>
-                    <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                    <li>LOGIN</li>
+                    <li><a href="#">JOIN</a></li>
+                    <li><i class="fas fa-search"></i></li>
+                    <li><i class="fas fa-shopping-cart"></i></li>
                 </ul>
             </div>
         </div>
@@ -87,16 +105,25 @@
         </ul>
     </div>
 
-    <div class="pc_submenu">
-        <ul class="shop-submenu-list">
-            <li><a href="#">Top</a></li>
-            <li><a href="#">Bottom</a></li>
-            <li><a href="#">Outer</a></li>
-            <li><a href="#">Chandlery</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Shoes</a></li>
-            <li><a href="#"><i class="fas fa-long-arrow-alt-left"></i></a></li>
-        </ul>
+    <div class="login_modal">
+        <div class="close_btn_section"><i class="fas fa-times"></i></div>
+        <div class="ID">ID <input type="text" name="ID"></div>
+        <div class="PASSWORD">PASSWORD <input type="password" name="password"></div>
+        <div class="button"><button>LOG IN</button> <button>JOIN</button></div>
+    </div>
+
+    <div class="search_modal">
+        <div class="close_btn_section"><i class="fas fa-times"></i></div>
+        <div class="search_box"><i class="fas fa-search"></i><input type="text" name="search" placeholder="검색어 입력"></div>
+        <div class="button_wrapper">
+            <button>#TOP</button>
+            <button>#BOTTOM</button>
+            <button>#OUTER</button>
+            <button>#ACCESRROIES</button>
+            <button>#CHANDLERY</button>
+            <button>#SHOES</button>
+        </div>
+        
     </div>
 
     <div class="bodywrap">
@@ -246,5 +273,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script/script.js"></script>
+    <script>
+
+    </script>
 
 </body></html>

@@ -9,9 +9,12 @@ const header_submenu = document.querySelector('.header_submenu');
 const shop_submenu_list = document.querySelector('.shop_submenu_list');
 const shop_submenu_list_items = document.querySelectorAll('.shop_submenu_list > li');
 const menu_list = document.querySelectorAll('.header_menu >  li > a');
+
 const border = document.querySelectorAll('.border');
 
 window.onload = function(){
+
+    
 
     hamburger_menu.addEventListener('click',()=>{
         if(hamburger_menu.classList.contains("active") == true){
@@ -88,7 +91,7 @@ window.onload = function(){
         },500);
     }
 
-
+    
 };
 
 

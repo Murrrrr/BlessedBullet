@@ -20,7 +20,7 @@ body{
 }
 
 header{
-    z-index: 9;
+    z-index: 999;
     background-color: #fff;;
     width: 100%;
     height: 50px;
@@ -174,6 +174,10 @@ header{
     display: none;
 }
 
+.shop-submenu-list_pc{
+    display:none;
+}
+
 @media all and (min-width: 768px){
     header{
         height:100px;
@@ -238,39 +242,70 @@ header{
         padding: 30px 0;
         padding: 1.875rem 0;
     }
+
+    .shop-submenu-list_pc{
+        display:none;
+    }
+
+
 }
 
 @media all and (min-width: 1280px){
 
     header{
+        background: #fff;
+        width: 100%;
         height: 80px;
         height: 5rem;
     }
 
     .top{
+        background-color: #fff;
         width: 90%;
         margin: 0 auto;
     }
     .hamburger-menu{
         display:none;
     }
+
+    .header-menu{
+        width: 30%;
+        height: 100%;
+
+    }
     
     .header-menu > ul{
+        height: 100%;
         display:flex;
-        justify-content: space-between;
         align-items: center;
+        justify-items: flex-start;
     }
-    
+
     .header-menu > ul > li{
-        position:relative;
-        width: auto;
+        width:auto;
+    }
+
+    .header-menu > ul > li > a{
+        width: 100%;
+        font-size: 0.75rem;
+        position: relative;
         display:inline-block;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .border-box{
+        top: 50%;
+        left: 50%;
+        margin-left: -35%;
+        position: absolute;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #000;
+        width: 0%;
+        transition: all 0.3s;
     }
     
-    .header-menu > ul a{
-        font-size: 12px;
-        font-size: 0.75rem;
-    }
+    
     
     .mobile-login-menu{
         display:none;
@@ -284,24 +319,213 @@ header{
     .login-menu > ul{
         align-items: center;
         display:flex;
+        justify-content: flex-end;
     }
     
     .login-menu > ul > li{
-        text-align: right;
+        width: auto;
+        padding: 2rem 1.5rem;
+        font-size: 0.75rem;
+        cursor:pointer;
+        text-align: center;
+    }
+
+    .login-menu input{
+        position:relative;
+        
+    }
+
+    .login-menu .fas{
+        font-size: 0.75rem;
+        width: auto;
     }
     
     .login-menu > ul a{
-        font-size: 12px;
+        font-size: 0.75rem;
     }
-    
-    .border{
-        top: 20px;
-        width: 0%;
-        position:absolute;
-        background-color:#000;
-        height: 1px;
-        transition: 0.5s;
+
+    .login_modal{
+        display:none;
+        z-index: 999;
+        position:fixed;
+        top:6.25rem;
+        
+        right: 1.875rem;
+        width: 21.875rem;
+        height: auto;
+        background-color: #fff;
+        border-radius: 0.3125rem;
+        box-shadow: 0 0.2rem 0.6rem #555;
     }
+
+    .login_modal .fas{
+        display:inline;
+        cursor:pointer;
+        color: #aaa;
+        width: auto;
+        
+    }
+
+    .login_modal .close_btn_section{
+        text-align: right;
+        margin: 1rem auto;
+        width: 90%;
+        height: 1rem;
+    }
+
+    .login_modal > div{
+        font-weight: bold;
+        text-align: right;
+        margin: 20px 0 ;
+        font-size: 0.75rem;
+    }
+
+    .login_modal input{
+        border: 1px solid #aaa;
+        margin: 0 1.25rem;
+        position:relative;
+        width: 12.5rem;
+        font-size: 0.75rem;
+        padding: 0.3125rem;
+    }
+
+    .login_modal .button{
+        margin-top: 2rem;
+        width: 100%;
+        display:flex;
+        justify-content: space-around;
+    }
+
+    .login_modal .button > button{
+        font-size: 0.75rem;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #999;
+        padding: 0.625rem;
+        width: 6.25rem;
+        transition: all 0.3s;
+    }
+
+    .login_modal .button > button:hover{
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #000;
+    }
+
+    .search_modal{
+        z-index: 999;
+        position:fixed;
+        top:6.25rem;
+        display: none;
+        right: 1.875rem;
+        width: 21.875rem;
+        height: auto;
+        background-color: #fff;
+        border-radius: 0.3125rem;
+        box-shadow: 0 0.2rem 0.6rem #555;
+    }
+
+    .search_modal .close_btn_section{
+        text-align: right;
+        margin: 1rem auto;
+        width: 90%;
+        height: 1rem;
+    }
+
+    .search_modal .fa-times{
+        display:inline;
+        cursor:pointer;
+        color: #aaa;
+        width: auto;
+        
+    }
+
+    .search_modal .fa-search{
+        font-size: 0.75rem;
+        text-align: center;
+        width :10%;
+    }
+
+    .search_modal .search_box{
+        width: 80%;
+        margin: 0 auto;
+        border-bottom: 3px solid #333;
+    }
+
+    .search_modal .button_wrapper{
+        display:block;
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .button_wrapper > button{
+        cursor: pointer;
+        letter-spacing: 1px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        border: 1px solid #000;
+        margin: 0.3rem 0.2rem;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.1rem;
+    }
+
+    .button_wrapper > .active{
+        background-color: #000;
+        color: #fff;
+    }
+
+    .search_modal button{
+        display:inline-block;
+        font-size: 0.75rem;
+        width: auto;
+    }
+
+    .search_modal input{
+        font-family: "나눔스퀘어";
+        padding: 0.5rem;
+        border:none;
+        display:inline-block;
+        width: 90%;
+        font-size: 0.75rem;
+    }
+
+    .shop-submenu-list_pc{
+        width: 100%;
+        display:flex;
+        position: fixed;
+        height: 0;
+        overflow: hidden;
+        background-color: #fff;
+        top: 5rem;
+        z-index: -1;
+        left: 0;
+        transition: all 0.3s;
+        border-bottom: 1px solid #ddd;
+        
+    }
+
+
+    .shop-submenu-list_pc a{
+        
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .shop-submenu-list_pc a:hover{
+        background-color: #ddd;
+    }
+
+    .shop-submenu-list_pc span{
+        margin-top: 1rem;
+        display:inline-block;
+        font-size: 0.75rem;
+    }
+
+    .shop-submenu-list_pc img{
+        width: 60%;
+    }
+
+
 }
 
 @media all and (min-width: 1600px){
@@ -335,6 +559,8 @@ header{
     .border{
         top: 26px;
     }
+
+
 }
 
 

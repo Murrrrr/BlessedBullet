@@ -1,17 +1,44 @@
 const menu_list = document.querySelectorAll('.header-menu > ul >  li');
-const border = document.querySelectorAll('.border');
+const border_box = document.querySelectorAll('.border-box');
 var popular_container = document.querySelector('.popular-container-list');
 var popular_item_list = document.querySelectorAll('.popular-container-list > a');
 var lookbook_container = document.querySelector('.lookbook-container');
 var media_768 = window.matchMedia("all and (max-width: 768px)");
 var media_1024 = window.matchMedia("all and (max-width: 1024px)");
 var media_1280 = window.matchMedia("all and (max-width: 1280px)");
-
+const shop_list = document.querySelectorAll('.header-menu > ul > li > a');
+const shop_submenu_list_pc = document.querySelector('.shop-submenu-list_pc');
+const login = document.querySelectorAll('.login-menu > ul > li');
+const login_modal = document.querySelector('.login_modal');
+const login_modal_closeBtn = document.querySelector('.login_modal .fa-times');
+const search_modal = document.querySelector('.search_modal');
+const search_modal_closeBtn = document.querySelector('.search_modal .fa-times');
+const button = document.querySelectorAll(".button_wrapper > button");
 
 var lookbook_container_caption = document.querySelector('.lookbook-container .caption');
 var index = 0;
 
 window.onload=()=>{
+
+    for(let i=0; i<button.length; i++){
+        button[i].addEventListener('click', ()=>{
+            if(button[i].classList == "active")
+                button[i].classList.remove('active');
+            else
+                button[i].classList.add('active');
+        })
+    }
+
+    login[2].addEventListener('click',()=>{
+        search_modal.style.display = "block";
+    })
+
+    search_modal_closeBtn.addEventListener('click', ()=>{
+        search_modal.style.display = "none";
+    })
+
+    
+
     if(window.matchMedia("all and (min-width: 1280px").matches){
         lookbook_container_caption.style.opacity = "0";
         lookbook_container_caption.style.transform = "translateX(-100px)";
@@ -21,19 +48,42 @@ window.onload=()=>{
         }
     }
 
+    for(let j=0; j<shop_list.length; j++){
+        shop_list[j].addEventListener('mouseover',()=>{
+            if(j == 1){
+                shop_submenu_list_pc.style.height = "34%";
+            }
+            border_box[j].style.width = "70%";
+        })
 
-    
-    for (let i = 0; i < menu_list.length; i++) {
-        menu_list[i].addEventListener('mouseover', () => {
-            border[i].style.width = "100%";
+        shop_list[j].addEventListener('mouseout', ()=>{
+            if(j == 1){
+                shop_submenu_list_pc.style.height = "0%";
+            }
+            border_box[j].style.width = "0%";
         })
     }
-    
-    for (let i = 0; i < menu_list.length; i++) {
-        menu_list[i].addEventListener('mouseout', () => {
-            border[i].style.width = "0%";
-        })
-    }
+
+    shop_submenu_list_pc.addEventListener('mouseover',()=>{
+        shop_submenu_list_pc.style.height = "34%";
+    });
+
+    shop_submenu_list_pc.addEventListener('mouseout',()=>{
+        shop_submenu_list_pc.style.height = "0%";
+    });
+
+    login[0].addEventListener('click',()=>{
+        login_modal.style.display = "block";
+    });
+
+    login_modal_closeBtn.addEventListener('click',()=>{
+        login_modal.style.display = "none";
+    })
+
+
+
+
+
     
     function item_show(n){
             popular_item_list[n].style.transform = "translateY(0)";
@@ -207,7 +257,6 @@ $(document).ready(function () {
     });
 
 
-
     // -------------------------------햄버거 메뉴 애니메이션----------------------------
     function hamburger_menu_animate_open(height) {
         $('.hamburger-menu > .line').css({
@@ -258,6 +307,6 @@ $(document).ready(function () {
         });
 
     }
-
+    
 
 });

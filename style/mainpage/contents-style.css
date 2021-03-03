@@ -59,6 +59,7 @@
     text-align: center;
 }
 
+
 .view-more-btn {
     width: 100%;
     margin-top: 2.5rem;
@@ -158,9 +159,6 @@
     border-top: none;
     transition: height 0.2s linear,
                 width 0.2s linear 0.2s;
-}
-
-.item-wrapper a {
 }
 
 .item-wrapper img {
@@ -320,7 +318,10 @@
     }
 
 
-    .item-info,
+    .item-info{
+        font-size: 0.8rem;
+        padding-top: 0.7rem;
+    }
     .item-price {
         font-size: 1rem;
         padding-top: 0.7rem;
