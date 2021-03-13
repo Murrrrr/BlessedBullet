@@ -269,6 +269,10 @@ $main-image-caption-fontsize: 1rem;
                         font-size: $item_page_header_title_fontsize/2;
                     }
                 }
+
+                .item_sort{
+                    top: 60px;
+                }
             }
 
             .item_page_list {
@@ -463,6 +467,10 @@ $main-image-caption-fontsize: 1rem;
 
             .item_page_header {
                 padding: $item_page_header_padding 0;
+
+                .item_sort{
+                    top: 80px;
+                }
 
                 .item_page_header_title {
                     font-size: $item_page_header_title_fontsize;

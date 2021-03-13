@@ -235,6 +235,9 @@ body {
   .bodywrap .item_page .item_page_header .item_page_sort select {
     font-size: 0.75rem;
   }
+  .bodywrap .item_page .item_page_header .item_sort {
+    top: 60px;
+  }
   .bodywrap .item_page .item_page_list {
     grid-template-columns: repeat(3, 29%);
     grid-template-rows: repeat(4, 1fr);
@@ -355,6 +358,9 @@ body {
   }
   .bodywrap .item_page .item_page_header {
     padding: 1.875rem 0;
+  }
+  .bodywrap .item_page .item_page_header .item_sort {
+    top: 80px;
   }
   .bodywrap .item_page .item_page_header .item_page_header_title {
     font-size: 1.875rem;
