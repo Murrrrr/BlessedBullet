@@ -178,6 +178,12 @@ header{
     display:none;
 }
 
+
+.search_modal{
+    display: none;
+
+}
+
 @media all and (min-width: 768px){
     header{
         height:100px;
@@ -245,6 +251,11 @@ header{
 
     .shop-submenu-list_pc{
         display:none;
+    }
+
+    .search_modal{
+        display: none;
+
     }
 
 
@@ -413,10 +424,10 @@ header{
     }
 
     .search_modal{
+        display: none;
         z-index: 999;
         position:fixed;
         top:6.25rem;
-        display: none;
         right: 1.875rem;
         width: 21.875rem;
         height: auto;
